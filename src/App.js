@@ -170,7 +170,7 @@ function App() {
   const [data, setData] = useState(null)
   useEffect(() => {
     const fetchData = async () => {
-      const result = await (await fetch('http://localhost:3000/')).json()
+      const result = await (await fetch('http://ec2-3-122-57-129.eu-central-1.compute.amazonaws.com')).json()
       result.sort((a, b) => b.total - a.total)
       setData(result)
       setIsLoading(false)
